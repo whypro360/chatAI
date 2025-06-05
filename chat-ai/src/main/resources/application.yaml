@@ -1,0 +1,25 @@
+spring:
+  ai:
+    openai:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: qwen-max-latest
+      embedding:
+        options:
+          model: text-embedding-v3
+          dimensions: 1024
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/old_people?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true&useSSL=false&allowMultiQueries=true
+    username: root
+    password: 123456
+logging:
+  level:
+    org.springframework.ai: debug
+    com.main.chatai: debug
