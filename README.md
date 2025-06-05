@@ -1,0 +1,2 @@
+# chatAI
+使用在springboot和springAI后端框架，以vue3为前端框架的一个AI聊天界面
